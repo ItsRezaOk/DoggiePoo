@@ -79,7 +79,7 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
     console.log('Order submitted:', orderData);
     
     // Show success message
-    alert(`🎉 Welcome to PawClean Pro, ${formData.name}! Your ${selectedDay} service starts next week. We'll send confirmation details to ${formData.email}.`);
+    alert(`🎉 Welcome to CycleScoop Iowa, ${formData.name}! Your ${selectedDay} service starts next week. We'll send confirmation details to ${formData.email}.`);
     
     // Reset form
     setShowOrderForm(false);

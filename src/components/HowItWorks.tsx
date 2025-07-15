@@ -23,7 +23,7 @@ const HowItWorks: React.FC = () => {
     {
       icon: '🌱',
       title: 'Fertilize & Treat',
-      description: 'Eco-friendly fertilizer treatment helps your grass grow greener and healthier.',
+      description: 'We apply eco-friendly fertilizer to every affected area, restoring nutrients, improving soil health, and reducing runoff. This sustainable approach keeps your lawn and the environment healthy.',
       color: 'bg-yellow-100 text-yellow-600'
     }
   ];

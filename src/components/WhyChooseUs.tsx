@@ -73,9 +73,9 @@ const WhyChooseUs: React.FC = () => {
       color: 'bg-blue-100 text-blue-600'
     },
     {
-      icon: <Leaf size={32} />,
-      title: 'Eco-Friendly',
-      description: 'Our organic fertilizer treatments are safe for pets and the environment.',
+      icon: <Leaf className="w-8 h-8 text-green-600" />,
+      title: 'Eco-Friendly Fertilization',
+      description: 'After every scoop, we fertilize affected areas to restore nutrients, improve soil health, and reduce pollution. Our sustainable process helps lawns thrive and supports a greener Iowa.',
       color: 'bg-green-100 text-green-600'
     },
     {
@@ -97,7 +97,7 @@ const WhyChooseUs: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Why Choose PawClean Pro?
+            Why Choose CycleScoop Iowa?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Trusted by thousands of pet owners across the city

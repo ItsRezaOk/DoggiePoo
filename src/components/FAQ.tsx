@@ -106,7 +106,7 @@ const FAQ: React.FC = () => {
                 <span>Call Us: (555) PAW-CLEAN</span>
               </a>
               <a 
-                href="mailto:hello@pawcleanpro.com"
+                href="mailto:hello@cyclescoop.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2"
               >
                 <span>✉️</span>

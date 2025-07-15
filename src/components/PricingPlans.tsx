@@ -12,19 +12,19 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDo
       name: 'Small Yard',
       basePrice: 25,
       description: 'Perfect for cozy spaces',
-      features: ['Weekly waste removal', 'Eco-friendly fertilizer', 'Spot treatment', 'Service guarantee']
+      features: ['Weekly waste removal', 'Eco-friendly fertilization of affected areas (supports soil health and the environment)', 'Spot treatment', 'Service guarantee']
     },
     {
       name: 'Medium Yard',
       basePrice: 35,
       description: 'Most popular choice',
-      features: ['Weekly waste removal', 'Eco-friendly fertilizer', 'Spot treatment', 'Service guarantee', 'Priority scheduling']
+      features: ['Weekly waste removal', 'Eco-friendly fertilization of affected areas (supports soil health and the environment)', 'Spot treatment', 'Service guarantee', 'Priority scheduling']
     },
     {
       name: 'Large Yard',
       basePrice: 45,
       description: 'For spacious properties',
-      features: ['Weekly waste removal', 'Eco-friendly fertilizer', 'Spot treatment', 'Service guarantee', 'Priority scheduling', 'Lawn health report']
+      features: ['Weekly waste removal', 'Eco-friendly fertilization of affected areas (supports soil health and the environment)', 'Spot treatment', 'Service guarantee', 'Priority scheduling', 'Lawn health report']
     }
   ];
 
