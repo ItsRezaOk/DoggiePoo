@@ -20,7 +20,6 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <Facebook size={24} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram size={24} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
               <Twitter size={24} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
             </div>
           </div>
@@ -41,10 +40,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>Weekly Waste Removal</li>
+              <li>Weekly or Bi-WeeklyWaste Removal</li>
               <li>Eco-Friendly Fertilizer</li>
-              <li>Spot Treatment</li>
-              <li>Lawn Health Reports</li>
+              <li>Lawn Spot Treatment</li>
               <li>Pet Waste Composting</li>
             </ul>
           </div>
@@ -55,7 +53,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone size={18} />
-                <span>(555) PAW-CLEAN</span>
+                <span>(555) 776-7304</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={18} />
@@ -63,7 +61,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={18} />
-                <span>Serving Greater Metro Area</span>
+                <span>Serving Ames, Iowa & Iowa State University</span>
               </div>
             </div>
             
@@ -102,7 +100,7 @@ const Footer: React.FC = () => {
           <div className="bg-gray-700 rounded-lg p-6 text-center">
             <div className="inline-flex items-center space-x-4 text-green-400">
               <span>🗺️</span>
-              <span>Downtown • Suburbia • Riverside • Hillside • Parkview</span>
+              <span>Ames, Ankeny, Iowa State Campus</span>
             </div>
             <p className="text-gray-300 mt-2">
               Don't see your area? Contact us - we're always expanding our mission for a cleaner, greener Iowa!
@@ -120,7 +118,7 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="flex items-center space-x-4 text-gray-300">
-              <span>© 2024 CycleScoop Iowa. All rights reserved.</span>
+              <span>© 2025 CycleScoop Iowa. All rights reserved.</span>
               <span className="text-2xl">🐾</span>
             </div>
           </div>

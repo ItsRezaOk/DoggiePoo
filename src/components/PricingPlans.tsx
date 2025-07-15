@@ -76,7 +76,7 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDo
               Our Guarantee
             </h3>
             <p className="text-lg text-gray-700 mb-4">
-              "If we miss a scoop, your week is free of service is free, no ifs, ands, or butts!"
+              "If we miss a scoop, your week of service is free, no ifs, ands, or butts!"
             </p>
             <div className="inline-flex items-center space-x-2 text-yellow-600">
               <span className="font-semibold">✨ 100% Satisfaction Guaranteed</span>
