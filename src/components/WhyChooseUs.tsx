@@ -100,7 +100,9 @@ const WhyChooseUs: React.FC = () => {
             Why Choose CycleScoop Iowa?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Local, eco-friendly, and trusted by Iowa pet owners for our quality and care.
+            Built on my Iowa State software engineering drive and experience,
+            fueled by entrepreneurial dreams and a lifelong love for dogs,
+            PawClean Pro delivers smart, caring service you can count on
           </p>
         </div>
         
