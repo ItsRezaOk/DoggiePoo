@@ -7,15 +7,15 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       question: "How often do you visit?",
-      answer: "We visit your yard once per week on your chosen day. Consistency is key to maintaining a clean, healthy yard for your furry friends!"
+      answer: "We visit your yard once per week any day chose by you. Consistency is key to maintaining a clean, healthy yard for your furry friends!"
     },
     {
       question: "What if my dog is protective or aggressive?",
-      answer: "Our team is experienced with all types of dogs. We'll work with you to find the best approach, whether that's scheduling during walks or using safe handling techniques. Safety is our top priority!"
+      answer: "Our team is experienced with all types of dogs. We'll work with you to find the best approach. Safety is our top priority!"
     },
     {
       question: "Do you work in bad weather?",
-      answer: "We service yards in most weather conditions, including light rain. During severe weather (thunderstorms, snow, etc.), we'll reschedule to the next available day at no extra charge."
+      answer: "We service yards in most weather conditions, including rain and snow. During severe weather (thunderstorms, etc.), we'll reschedule to the next available day at no extra charge."
     },
     {
       question: "What's included in the fertilizer treatment?",
@@ -27,15 +27,11 @@ const FAQ: React.FC = () => {
     },
     {
       question: "What if you miss a scheduled visit?",
-      answer: "If we miss a scheduled visit, we'll make it up within 24 hours AND your next month is completely free. No ifs, ands, or butts about it!"
+      answer: "If we miss a scheduled visit, we'll make it up within 24 hours AND your next month is completely free!"
     },
     {
       question: "Do you bring your own equipment?",
       answer: "Absolutely! We arrive fully equipped with professional-grade tools, biodegradable bags, sanitizer, and our eco-friendly fertilizer. You don't need to provide anything."
-    },
-    {
-      question: "Are you insured?",
-      answer: "Yes, we're fully licensed, bonded, and insured. We carry comprehensive liability insurance to protect both your property and our team members."
     }
   ];
 
@@ -99,14 +95,14 @@ const FAQ: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:555-PAW-CLEAN"
+                href="tel:515-776-7304"
                 className="bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2"
               >
                 <span>📞</span>
                 <span>Call Us: (555) PAW-CLEAN</span>
               </a>
               <a 
-                href="mailto:hello@cyclescoop.com"
+                href="mailto:idk@cyclescoop.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2"
               >
                 <span>✉️</span>

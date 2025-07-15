@@ -68,20 +68,20 @@ const WhyChooseUs: React.FC = () => {
   const features = [
     {
       icon: <Shield size={32} />,
-      title: 'Licensed & Insured',
-      description: 'Fully licensed, bonded, and insured for your peace of mind.',
+      title: 'Software Engineer at Iowa State University',
+      description: 'Working hard to develop software for the future Americans',
       color: 'bg-blue-100 text-blue-600'
     },
     {
       icon: <Leaf className="w-8 h-8 text-green-600" />,
-      title: 'Eco-Friendly Fertilization',
-      description: 'After every scoop, we fertilize affected areas to restore nutrients, improve soil health, and reduce pollution. Our sustainable process helps lawns thrive and supports a greener Iowa.',
+      title: 'Post Scoop Fertilization',
+      description: 'After every scoop, we fertilize affected areas to restore nutrients and improve soil health; Keeping your yard Greener ',
       color: 'bg-green-100 text-green-600'
     },
     {
       icon: <Users size={32} />,
-      title: 'Vet-Approved',
-      description: 'Recommended by local veterinarians for maintaining healthy outdoor spaces.',
+      title: 'Eco-Friendly Treatments',
+      description: 'Our eco-friendly treatments are safe for pets and the environment.',
       color: 'bg-purple-100 text-purple-600'
     },
     {

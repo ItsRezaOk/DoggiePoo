@@ -23,7 +23,7 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDo
             Simple, Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose your yard size, add your dogs, and get started today!
+            Add your dogs and get started today!
           </p>
         </div>
         
@@ -49,10 +49,10 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDo
               </li>
             </ul>
             <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded mb-4 text-green-800 font-semibold">
-              Add biweekly visits for a flat <span className="font-bold">$40/mo</span> extra &mdash; no matter how many dogs!
+              Add biweekly visits for just <span className="font-bold">$10 per week</span> extra &mdash; no matter how many dogs!
             </div>
             <div className="text-sm text-gray-500 mb-2">
-              All plans include: Weekly waste removal, eco-friendly fertilization, spot treatment, and our satisfaction guarantee.
+              All plans include: Weekly waste removal, eco-friendly post treatment fertilization, spot treatment, and our satisfaction guarantee.
             </div>
             <button
               className="w-full py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors mt-4"
@@ -76,7 +76,7 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDo
               Our Guarantee
             </h3>
             <p className="text-lg text-gray-700 mb-4">
-              "If we miss a scoop, next month is free — no ifs, ands, or butts!"
+              "If we miss a scoop, your week is free of service is free, no ifs, ands, or butts!"
             </p>
             <div className="inline-flex items-center space-x-2 text-yellow-600">
               <span className="font-semibold">✨ 100% Satisfaction Guaranteed</span>
