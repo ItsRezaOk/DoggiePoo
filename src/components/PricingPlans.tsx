@@ -7,25 +7,12 @@ interface PricingPlansProps {
 }
 
 const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDogs }) => {
-  const basePlans = [
-    {
-      name: 'Small Yard',
-      basePrice: 25,
-      description: 'Perfect for cozy spaces',
-      features: ['Weekly waste removal', 'Eco-friendly fertilizer', 'Spot treatment', 'Service guarantee']
-    },
-    {
-      name: 'Medium Yard',
-      basePrice: 35,
-      description: 'Most popular choice',
-      features: ['Weekly waste removal', 'Eco-friendly fertilizer', 'Spot treatment', 'Service guarantee', 'Priority scheduling']
-    },
-    {
-      name: 'Large Yard',
-      basePrice: 45,
-      description: 'For spacious properties',
-      features: ['Weekly waste removal', 'Eco-friendly fertilizer', 'Spot treatment', 'Service guarantee', 'Priority scheduling', 'Lawn health report']
-    }
+  // New pricing structure: per dog per month
+  const dogPricing = [
+    { dogs: 1, price: 45 },
+    { dogs: 2, price: 70 },
+    { dogs: 3, price: 85 },
+    { dogs: 4, price: 110, note: '4 or more' }
   ];
 
   return (
@@ -36,65 +23,49 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDo
             Simple, Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose your yard size, add your dogs, and get started today!
+            Add your dogs and get started today!
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-          {basePlans.map((plan, index) => (
-            <div 
-              key={index}
-              className={`bg-white rounded-2xl shadow-lg p-8 relative ${
-                index === 1 ? 'border-2 border-green-500 scale-105' : 'border border-gray-200'
-              }`}
-            >
-              {index === 1 && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
-                    <Award size={16} />
-                    <span>Most Popular</span>
-                  </div>
-                </div>
-              )}
-              
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">{plan.name}</h3>
-                <p className="text-gray-600 mb-4">{plan.description}</p>
-                
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-green-600">${plan.basePrice}</span>
-                  <span className="text-gray-600">/month</span>
-                </div>
-                
-                <p className="text-sm text-gray-500">
-                  + $10/month for each additional dog
-                </p>
-              </div>
-              
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-3">
-                    <Check size={20} className="text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                index === 1
-                  ? 'bg-green-500 text-white hover:bg-green-600'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+        <div className="max-w-2xl mx-auto mb-12">
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Monthly Pricing</h3>
+            <ul className="space-y-4 mb-4">
+              <li className="flex justify-between items-center border-b pb-2">
+                <span>1 Dog</span>
+                <span className="text-green-600 font-bold text-xl">$45/mo</span>
+              </li>
+              <li className="flex justify-between items-center border-b pb-2">
+                <span>2 Dogs</span>
+                <span className="text-green-600 font-bold text-xl">$70/mo</span>
+              </li>
+              <li className="flex justify-between items-center border-b pb-2">
+                <span>3 Dogs</span>
+                <span className="text-green-600 font-bold text-xl">$85/mo</span>
+              </li>
+              <li className="flex justify-between items-center border-b pb-2">
+                <span>4+ Dogs</span>
+                <span className="text-green-600 font-bold text-xl">$110/mo</span>
+              </li>
+            </ul>
+            <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded mb-4 text-green-800 font-semibold">
+              Add biweekly visits for just <span className="font-bold">$10 per week</span> extra &mdash; no matter how many dogs!
+            </div>
+            <div className="text-sm text-gray-500 mb-2">
+              All plans include: Weekly waste removal, eco-friendly post treatment fertilization, spot treatment, and our satisfaction guarantee.
+            </div>
+            <button
+              className="w-full py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors mt-4"
               onClick={() => {
                 const onboardingSection = document.getElementById('onboarding');
                 if (onboardingSection) {
                   onboardingSection.scrollIntoView({ behavior: 'smooth' });
                 }
-              }}>
-                Choose Plan
-              </button>
-            </div>
-          ))}
+              }}
+            >
+              Get Started
+            </button>
+          </div>
         </div>
         
         {/* Guarantee Badge */}
@@ -105,7 +76,7 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDo
               Our Guarantee
             </h3>
             <p className="text-lg text-gray-700 mb-4">
-              "If we miss a scoop, next month is free — no ifs, ands, or butts!"
+              "If we miss a scoop, your week of service is free, no ifs, ands, or butts!"
             </p>
             <div className="inline-flex items-center space-x-2 text-yellow-600">
               <span className="font-semibold">✨ 100% Satisfaction Guaranteed</span>

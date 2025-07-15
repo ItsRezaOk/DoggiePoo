@@ -5,6 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
+            <p className="text-green-300 mb-4">CycleScoop Iowa is committed to eco-friendly practices. After every scoop, we fertilize affected areas, restoring nutrients and supporting healthy soil for a cleaner, greener community.</p>
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
@@ -12,14 +13,13 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">🐾</span>
               </div>
-              <span className="text-2xl font-bold">PawClean Pro</span>
+              <span className="text-2xl font-bold">CycleScoop Iowa</span>
             </div>
             <p className="text-gray-300 mb-4">
               Making yards cleaner and dogs happier, one scoop at a time.
             </p>
             <div className="flex space-x-4">
               <Facebook size={24} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram size={24} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
               <Twitter size={24} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
             </div>
           </div>
@@ -40,10 +40,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>Weekly Waste Removal</li>
+              <li>Weekly or Bi-WeeklyWaste Removal</li>
               <li>Eco-Friendly Fertilizer</li>
-              <li>Spot Treatment</li>
-              <li>Lawn Health Reports</li>
+              <li>Lawn Spot Treatment</li>
               <li>Pet Waste Composting</li>
             </ul>
           </div>
@@ -54,15 +53,15 @@ const Footer: React.FC = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone size={18} />
-                <span>(555) PAW-CLEAN</span>
+                <span>(555) 776-7304</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={18} />
-                <span>hello@pawcleanpro.com</span>
+                <span>hello@cyclescoop.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={18} />
-                <span>Serving Greater Metro Area</span>
+                <span>Serving Ames, Iowa & Iowa State University</span>
               </div>
             </div>
             
@@ -101,10 +100,10 @@ const Footer: React.FC = () => {
           <div className="bg-gray-700 rounded-lg p-6 text-center">
             <div className="inline-flex items-center space-x-4 text-green-400">
               <span>🗺️</span>
-              <span>Downtown • Suburbia • Riverside • Hillside • Parkview</span>
+              <span>Ames, Ankeny, Iowa State Campus</span>
             </div>
             <p className="text-gray-300 mt-2">
-              Don't see your area? Contact us - we're always expanding!
+              Don't see your area? Contact us - we're always expanding our mission for a cleaner, greener Iowa!
             </p>
           </div>
         </div>
@@ -119,7 +118,7 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="flex items-center space-x-4 text-gray-300">
-              <span>© 2024 PawClean Pro. All rights reserved.</span>
+              <span>© 2025 CycleScoop Iowa. All rights reserved.</span>
               <span className="text-2xl">🐾</span>
             </div>
           </div>

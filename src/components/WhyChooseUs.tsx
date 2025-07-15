@@ -68,20 +68,20 @@ const WhyChooseUs: React.FC = () => {
   const features = [
     {
       icon: <Shield size={32} />,
-      title: 'Licensed & Insured',
-      description: 'Fully licensed, bonded, and insured for your peace of mind.',
+      title: 'Software Engineer at Iowa State University',
+      description: 'Working hard to develop software for the future Americans',
       color: 'bg-blue-100 text-blue-600'
     },
     {
-      icon: <Leaf size={32} />,
-      title: 'Eco-Friendly',
-      description: 'Our organic fertilizer treatments are safe for pets and the environment.',
+      icon: <Leaf className="w-8 h-8 text-green-600" />,
+      title: 'Post Scoop Fertilization',
+      description: 'After every scoop, we fertilize affected areas to restore nutrients and improve soil health; Keeping your yard Greener ',
       color: 'bg-green-100 text-green-600'
     },
     {
       icon: <Users size={32} />,
-      title: 'Vet-Approved',
-      description: 'Recommended by local veterinarians for maintaining healthy outdoor spaces.',
+      title: 'Eco-Friendly Treatments',
+      description: 'Our eco-friendly treatments are safe for pets and the environment.',
       color: 'bg-purple-100 text-purple-600'
     },
     {
@@ -97,44 +97,13 @@ const WhyChooseUs: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Why Choose PawClean Pro?
+            Why Choose CycleScoop Iowa?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Built on my Iowa State software engineering drive and experience,
             fueled by entrepreneurial dreams and a lifelong love for dogs,
             PawClean Pro delivers smart, caring service you can count on
           </p>
-        </div>
-        
-        {/* Stats Counter */}
-        <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
-              {stats.yards.toLocaleString()}+
-            </div>
-            <p className="text-gray-600 font-medium">Yards Cleaned</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-              {stats.pounds.toLocaleString()}+
-            </div>
-            <p className="text-gray-600 font-medium">Pounds Scooped</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">
-              {stats.customers.toLocaleString()}+
-            </div>
-            <p className="text-gray-600 font-medium">Happy Customers</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-orange-600 mb-2">
-              {stats.years}+
-            </div>
-            <p className="text-gray-600 font-medium">Years of Service</p>
-          </div>
         </div>
         
         {/* Features Grid */}

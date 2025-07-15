@@ -28,13 +28,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted }) => {
           {/* Left side - Content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Weekly Poop-Free Yards,
+              Weekly Poop-Free Yards with Eco-Friendly Lawn Fertilization,
               <span className="block text-yellow-200">Happy Dogs,</span>
-              <span className="block text-blue-200">Happier Owners</span>
+              <span className="block text-blue-200">Happier Owners, and a Greener Iowa</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
-              We chase the mess so you can chase the ball! Professional weekly dog waste removal with eco-friendly fertilizer treatment.
+              We chase the mess so you can chase the ball! Professional Eco-Friendly Dog Waste Removal & Lawn Fertilization with eco-friendly fertilizer treatment.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -50,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted }) => {
                 className="bg-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/30 transition-all transform hover:scale-105 backdrop-blur-sm flex items-center justify-center space-x-2"
               >
                 <Play size={20} />
-                <span>Watch How It Works</span>
+                <span>Watch How CycleScoop Iowa Works</span>
               </button>
             </div>
           </div>
@@ -88,7 +88,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted }) => {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg max-w-4xl w-full max-h-[80vh] overflow-hidden">
             <div className="flex justify-between items-center p-4 border-b">
-              <h3 className="text-xl font-semibold">How PawClean Pro Works</h3>
+              <h3 className="text-xl font-semibold">How CycleScoop Iowa Works</h3>
               <button 
                 onClick={() => setShowVideo(false)}
                 className="text-gray-500 hover:text-gray-700"
@@ -104,7 +104,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted }) => {
                 </div>
               </div>
               <p className="text-gray-600">
-                Watch our professional team in action - quick, efficient, and your dog will love us!
+                We remove dog waste and fertilize your lawn, restoring nutrients and supporting a cleaner, greener Iowa. Professional, eco-conscious, and your dogs will love us!
               </p>
             </div>
           </div>
