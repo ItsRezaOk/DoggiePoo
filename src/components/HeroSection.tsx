@@ -36,6 +36,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted }) => {
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
               We chase the mess so you can chase the ball! Professional weekly dog waste removal with eco-friendly fertilizer treatment.
             </p>
+            <img src="/images/me-with-dogs.jpg" alt="Me playing with dogs on the lawn" className="mx-auto rounded-lg shadow-md w-full max-w-md mb-6" />
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
