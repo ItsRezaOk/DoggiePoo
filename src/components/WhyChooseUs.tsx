@@ -100,7 +100,9 @@ const WhyChooseUs: React.FC = () => {
             Why Choose PawClean Pro?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Trusted by thousands of pet owners across the city
+            Built on my Iowa State software engineering drive and experience,
+            fueled by entrepreneurial dreams and a lifelong love for dogs,
+            PawClean Pro delivers smart, caring service you can count on
           </p>
         </div>
         
