@@ -75,6 +75,9 @@ const HowItWorks: React.FC = () => {
         </div>
         
         <div className="text-center mt-12">
+          <img src="/images/happy-dog-lawn.jpg" alt="Happy dog running on a lush green Iowa lawn" className="mx-auto rounded-lg shadow-md w-full max-w-md mb-6" />
+        </div>
+        <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-2 bg-green-100 px-6 py-3 rounded-full">
             <span className="text-green-600 font-semibold">✨ It's that simple!</span>
             <span className="text-2xl animate-bounce">🐕</span>

@@ -5,7 +5,8 @@ import HowItWorks from './components/HowItWorks';
 import OnboardingWidget from './components/OnboardingWidget';
 import PricingPlans from './components/PricingPlans';
 import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
+import Testimonials from "./components/Testimonials";
+import ImageGallery from "./components/ImageGallery";
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
@@ -102,6 +103,7 @@ function App() {
         <PricingPlans calculatedPrice={calculatedPrice} selectedDogs={selectedDogs} />
         <WhyChooseUs />
         <Testimonials />
+          <ImageGallery />
         <FAQ />
         
         {/* CTA Strip */}
@@ -120,6 +122,7 @@ function App() {
             <p className="text-xl text-white/90 mb-8">
               Join thousands of happy dogs and their owners!
             </p>
+              <img src="/images/iowa-landscape.jpg" alt="Peaceful Iowa landscape reminding me of home" className="mx-auto rounded-lg shadow-md w-full max-w-md mb-6" />
             <button 
               onClick={() => scrollToSection('onboarding')}
               className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"

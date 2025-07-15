@@ -105,6 +105,7 @@ const WhyChooseUs: React.FC = () => {
             PawClean Pro delivers smart, caring service you can count on
           </p>
         </div>
+                    <img src="/images/iowa-state-dogs.jpg" alt="Playing with dogs on the Iowa State University lawn" className="mx-auto rounded-lg shadow-md w-full max-w-md mt-6" />
         
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
