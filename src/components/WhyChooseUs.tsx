@@ -100,39 +100,8 @@ const WhyChooseUs: React.FC = () => {
             Why Choose CycleScoop Iowa?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Trusted by thousands of pet owners across the city
+            Local, eco-friendly, and trusted by Iowa pet owners for our quality and care.
           </p>
-        </div>
-        
-        {/* Stats Counter */}
-        <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
-              {stats.yards.toLocaleString()}+
-            </div>
-            <p className="text-gray-600 font-medium">Yards Cleaned</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
-              {stats.pounds.toLocaleString()}+
-            </div>
-            <p className="text-gray-600 font-medium">Pounds Scooped</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">
-              {stats.customers.toLocaleString()}+
-            </div>
-            <p className="text-gray-600 font-medium">Happy Customers</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-orange-600 mb-2">
-              {stats.years}+
-            </div>
-            <p className="text-gray-600 font-medium">Years of Service</p>
-          </div>
         </div>
         
         {/* Features Grid */}
