@@ -1,19 +1,7 @@
 import React from 'react';
-import { Check, Award } from 'lucide-react';
 
-interface PricingPlansProps {
-  calculatedPrice: number;
-  selectedDogs: number;
-}
 
-const PricingPlans: React.FC<PricingPlansProps> = ({ calculatedPrice, selectedDogs }) => {
-  // New pricing structure: per dog per month
-  const dogPricing = [
-    { dogs: 1, price: 45 },
-    { dogs: 2, price: 70 },
-    { dogs: 3, price: 85 },
-    { dogs: 4, price: 110, note: '4 or more' }
-  ];
+const PricingPlans: React.FC = () => {
 
   return (
     <section id="pricing" className="py-20 bg-gray-50">

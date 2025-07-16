@@ -96,7 +96,7 @@ function App() {
           setSelectedDay={setSelectedDay}
           calculatedPrice={calculatedPrice}
         />
-        <PricingPlans calculatedPrice={calculatedPrice} selectedDogs={selectedDogs} />
+        <PricingPlans />
         <WhyChooseUs />
         <Testimonials />
           <ImageGallery />
