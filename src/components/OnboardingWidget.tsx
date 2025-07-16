@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, CreditCard, Apple } from 'lucide-react';
+import { CreditCard, Apple } from 'lucide-react';
 
 interface OnboardingWidgetProps {
   selectedDogs: number;
   setSelectedDogs: (dogs: number) => void;
-  selectedYardSize: string;
-  setSelectedYardSize: (size: string) => void;
   selectedDay: string;
   setSelectedDay: (day: string) => void;
   calculatedPrice: number;
@@ -14,8 +12,6 @@ interface OnboardingWidgetProps {
 const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
   selectedDogs,
   setSelectedDogs,
-  selectedYardSize,
-  setSelectedYardSize,
   selectedDay,
   setSelectedDay,
   calculatedPrice
@@ -30,15 +26,9 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
   });
 
   const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  
-  const yardSizes = [
-    { id: 'small', name: 'Small', description: 'Up to 1,000 sq ft', price: 25, icon: '🏠' },
-    { id: 'medium', name: 'Medium', description: '1,000 - 5,000 sq ft', price: 35, icon: '🏡' },
-    { id: 'large', name: 'Large', description: '5,000+ sq ft', price: 45, icon: '🏘️' }
-  ];
 
   const handleNext = () => {
-    if (currentStep < 3) {
+    if (currentStep < 2) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -69,7 +59,6 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
       customer: formData,
       service: {
         dogs: selectedDogs,
-        yardSize: selectedYardSize,
         visitDay: selectedDay,
         monthlyPrice: calculatedPrice
       },
@@ -102,7 +91,7 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
           {/* Progress Bar */}
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
-              {[1, 2, 3].map((step) => (
+              {[1, 2].map((step) => (
                 <div 
                   key={step}
                   className={`flex items-center justify-center w-12 h-12 rounded-full ${
@@ -116,7 +105,7 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
                 className="bg-green-500 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${(currentStep / 3) * 100}%` }}
+                style={{ width: `${(currentStep / 2) * 100}%` }}
               ></div>
             </div>
           </div>
@@ -146,7 +135,7 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
                   
                   <div className="text-center">
                     <div className="text-6xl mb-4">
-                      {Array.from({ length: selectedDogs }, (_, i) => '🐕').join('')}
+                      {Array.from({ length: selectedDogs }, () => '🐕').join('')}
                     </div>
                     <p className="text-2xl font-bold text-green-600">
                       {selectedDogs} Dog{selectedDogs > 1 ? 's' : ''}
@@ -163,52 +152,8 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
               </div>
             )}
 
-            {/* Step 2: Yard Size */}
+            {/* Step 2: Select Day */}
             {currentStep === 2 && (
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                  What's your yard size?
-                </h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  {yardSizes.map((size) => (
-                    <button
-                      key={size.id}
-                      onClick={() => setSelectedYardSize(size.id)}
-                      className={`p-6 rounded-xl border-2 transition-all ${
-                        selectedYardSize === size.id
-                          ? 'border-green-500 bg-green-50 scale-105'
-                          : 'border-gray-200 hover:border-green-300'
-                      }`}
-                    >
-                      <div className="text-4xl mb-2">{size.icon}</div>
-                      <h4 className="text-lg font-semibold text-gray-800">{size.name}</h4>
-                      <p className="text-sm text-gray-600 mb-2">{size.description}</p>
-                      <p className="text-xl font-bold text-green-600">${size.price}/month</p>
-                    </button>
-                  ))}
-                </div>
-                
-                <div className="flex justify-center space-x-4">
-                  <button
-                    onClick={handleBack}
-                    className="bg-gray-200 text-gray-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition-colors"
-                  >
-                    ← Back
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    disabled={!selectedYardSize}
-                    className="bg-green-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors disabled:opacity-50"
-                  >
-                    Next Step 🏷️
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* Step 3: Select Day */}
-            {currentStep === 3 && (
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">
                   Pick your weekly visit day
@@ -238,7 +183,7 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
                     <h4 className="text-2xl font-bold text-gray-800 mb-2">Your Monthly Price</h4>
                     <p className="text-4xl font-bold text-green-600">${calculatedPrice}</p>
                     <p className="text-sm text-gray-600 mt-2">
-                      {selectedDogs} dog{selectedDogs > 1 ? 's' : ''} • {selectedYardSize} yard • Weekly service
+                      {selectedDogs} dog{selectedDogs > 1 ? 's' : ''} • Weekly service
                     </p>
                   </div>
                 </div>
@@ -341,10 +286,6 @@ const OnboardingWidget: React.FC<OnboardingWidgetProps> = ({
                     <div className="flex justify-between">
                       <span>Dogs:</span>
                       <span>{selectedDogs}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Yard size:</span>
-                      <span>{selectedYardSize}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Visit day:</span>

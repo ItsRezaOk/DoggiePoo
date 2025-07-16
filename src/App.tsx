@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Star, CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import HeroSection from './components/HeroSection';
 import HowItWorks from './components/HowItWorks';
 import OnboardingWidget from './components/OnboardingWidget';
@@ -12,22 +12,20 @@ import Footer from './components/Footer';
 
 function App() {
   const [selectedDogs, setSelectedDogs] = useState(1);
-  const [selectedYardSize, setSelectedYardSize] = useState('medium');
   const [selectedDay, setSelectedDay] = useState('');
   const [calculatedPrice, setCalculatedPrice] = useState(0);
 
-  // Calculate price based on selections
+  // Calculate price based on number of dogs
   useEffect(() => {
-    const basePrices = {
-      small: 25,
-      medium: 35,
-      large: 45
+    const dogPrices: Record<number, number> = {
+      1: 45,
+      2: 70,
+      3: 85
     };
-    
-    const basePrice = basePrices[selectedYardSize as keyof typeof basePrices];
-    const additionalDogCost = (selectedDogs - 1) * 10;
-    setCalculatedPrice(basePrice + additionalDogCost);
-  }, [selectedDogs, selectedYardSize]);
+
+    const price = selectedDogs >= 4 ? 110 : dogPrices[selectedDogs];
+    setCalculatedPrice(price);
+  }, [selectedDogs]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -91,16 +89,14 @@ function App() {
       <main>
         <HeroSection onGetStarted={() => scrollToSection('onboarding')} />
         <HowItWorks />
-        <OnboardingWidget 
+        <OnboardingWidget
           selectedDogs={selectedDogs}
           setSelectedDogs={setSelectedDogs}
-          selectedYardSize={selectedYardSize}
-          setSelectedYardSize={setSelectedYardSize}
           selectedDay={selectedDay}
           setSelectedDay={setSelectedDay}
           calculatedPrice={calculatedPrice}
         />
-        <PricingPlans calculatedPrice={calculatedPrice} selectedDogs={selectedDogs} />
+        <PricingPlans />
         <WhyChooseUs />
         <Testimonials />
           <ImageGallery />

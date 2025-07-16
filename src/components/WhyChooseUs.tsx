@@ -1,69 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Shield, Leaf, Users, TrendingUp } from 'lucide-react';
 
 const WhyChooseUs: React.FC = () => {
-  const [stats, setStats] = useState({
-    yards: 0,
-    pounds: 0,
-    customers: 0,
-    years: 0
-  });
-
-  const finalStats = {
-    yards: 2500,
-    pounds: 15000,
-    customers: 1200,
-    years: 5
-  };
-
-  useEffect(() => {
-    const animateStats = () => {
-      const duration = 2000;
-      const intervalTime = 50;
-      const steps = duration / intervalTime;
-      
-      let currentStep = 0;
-      const timer = setInterval(() => {
-        currentStep++;
-        const progress = currentStep / steps;
-        const easeProgress = 1 - Math.pow(1 - progress, 3);
-        
-        setStats({
-          yards: Math.floor(finalStats.yards * easeProgress),
-          pounds: Math.floor(finalStats.pounds * easeProgress),
-          customers: Math.floor(finalStats.customers * easeProgress),
-          years: Math.floor(finalStats.years * easeProgress)
-        });
-        
-        if (currentStep >= steps) {
-          clearInterval(timer);
-          setStats(finalStats);
-        }
-      }, intervalTime);
-      
-      return () => clearInterval(timer);
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          const cleanup = animateStats();
-          observer.disconnect();
-          return cleanup;
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    const element = document.getElementById('stats-section');
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   const features = [
     {
